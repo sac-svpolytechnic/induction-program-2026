@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 1 Attendance QR Code - SVP Induction Program '26</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@600;700;800&family=Plus+Jakarta+Sans:wght@500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body { font-family: 'Plus Jakarta Sans', sans-serif; }
+        .font-heading { font-family: 'Outfit', sans-serif; }
+        @media print {
+            .no-print { display: none !important; }
+            body { background: white !important; color: black !important; }
+            .print-card { border: 2px solid #000 !important; box-shadow: none !important; }
+        }
+    </style>
+</head>
+<body class="bg-slate-100 min-h-screen flex flex-col items-center justify-center p-4">
+
+    <!-- Action Bar (Not Printed) -->
+    <div class="no-print mb-6 flex items-center gap-4">
+        <button onclick="window.print()" class="px-6 py-3 bg-indigo-600 hover:bg-indigo-700 text-white font-bold rounded-xl shadow-lg flex items-center gap-2 transition-all">
+            <i class="fa-solid fa-print"></i> Print QR Sheet for Auditorium
+        </button>
+        <a href="../index.html" class="px-5 py-3 bg-slate-700 hover:bg-slate-800 text-white font-semibold rounded-xl flex items-center gap-2">
+            <i class="fa-solid fa-arrow-left"></i> Back to Website
+        </a>
+    </div>
+
+    <!-- Printable Poster Sheet -->
+    <div class="print-card w-full max-w-xl bg-white rounded-3xl p-8 sm:p-12 shadow-2xl border-4 border-indigo-600 text-center relative overflow-hidden">
+        
+        <!-- Top Banner Header -->
+        <div class="border-b-2 border-slate-200 pb-6 mb-6">
+            <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-indigo-100 text-indigo-800 font-extrabold text-xs uppercase tracking-wider mb-2">
+                <i class="fa-solid fa-graduation-cap"></i> SVP • Innovation Club
+            </div>
+            <h1 class="font-heading text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
+                Induction Program '26
+            </h1>
+            <p class="text-indigo-600 font-bold text-sm tracking-wide uppercase mt-1">
+                Campus Auditorium • Official Daily Attendance
+            </p>
+        </div>
+
+        <!-- Day Badge -->
+        <div class="bg-indigo-600 text-white py-2.5 px-6 rounded-2xl font-heading text-xl font-bold tracking-wider inline-block mb-6 shadow-md">
+            DAY 01 — AUGUST 5 (MONDAY)
+        </div>
+
+        <!-- High-Resolution QR Code Container -->
+        <div class="bg-slate-50 p-6 rounded-3xl border-2 border-slate-200 inline-block mb-6 shadow-inner">
+            <!-- QR Code pointing to Day 1 Attendance Google Form -->
+            <img src="https://api.qrserver.com/v1/create-qr-code/?size=300x300&data=https%3A%2F%2Fdocs.google.com%2Fforms%2Fd%2Fe%2F1FAIpQLSedIJdyfQO_61GHgXDmipoQ5bbtF4sq8tyCxgItgk0h_uwTNg%2Fviewform%3Fusp%3Dpp_url%26entry.1442341660%3DDay%2B1%2BAttendance" 
+                 alt="Day 1 Attendance QR Code" 
+                 class="w-64 h-64 sm:w-72 sm:h-72 mx-auto rounded-xl shadow-md border-2 border-white">
+        </div>
+
+        <!-- Instructions -->
+        <div class="space-y-3 bg-amber-50 border-2 border-amber-300 rounded-2xl p-4 text-slate-800 text-xs sm:text-sm">
+            <div class="font-bold text-amber-900 flex items-center justify-center gap-2">
+                <i class="fa-solid fa-camera text-base"></i> Scan with Phone Camera or WhatsApp
+            </div>
+            <p class="leading-relaxed">
+                Scan this QR code to mark your attendance for <strong>Day 1</strong>. Attendance is strictly cross-verified with your Induction Registration to issue your <strong>Official E-Certificate of Participation</strong>!
+            </p>
+        </div>
+
+        <!-- Footer Tagline -->
+        <div class="mt-6 pt-4 border-t border-slate-200 text-slate-500 text-xs font-semibold">
+            Organised by Innovation Club • By the Students, Of the Students, For the Students
+        </div>
+
+    </div>
+
+</body>
+</html>
