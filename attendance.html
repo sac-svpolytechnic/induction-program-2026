@@ -96,8 +96,9 @@
             <!-- Form -->
             <form id="attendanceForm" class="space-y-5">
                 
-                <!-- Hidden Tag for Day -->
+                <!-- Hidden Tag for Day & Google Form Required Fields -->
                 <input type="hidden" id="attendanceTag" name="entry.1442341660" value="Day 1 Auditorium Attendance">
+                <input type="hidden" name="entry.217614811" value="Innovation Club">
 
                 <!-- Full Name -->
                 <div>
@@ -109,6 +110,20 @@
                             <i class="fa-regular fa-user text-sm"></i>
                         </div>
                         <input type="text" id="attName" name="entry.1400164795" required placeholder="e.g. Rahul Sharma"
+                            class="glass-input w-full pl-10 pr-4 py-3.5 rounded-xl text-sm placeholder:text-slate-500">
+                    </div>
+                </div>
+
+                <!-- Email Address -->
+                <div>
+                    <label for="attEmail" class="block text-xs font-bold uppercase tracking-wider text-slate-200 mb-2">
+                        Email Address <span class="text-rose-400 text-xs font-normal lowercase ml-1">(Required)</span>
+                    </label>
+                    <div class="relative">
+                        <div class="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-slate-400">
+                            <i class="fa-regular fa-envelope text-sm"></i>
+                        </div>
+                        <input type="email" id="attEmail" name="entry.1893877721" required placeholder="rahul@gmail.com"
                             class="glass-input w-full pl-10 pr-4 py-3.5 rounded-xl text-sm placeholder:text-slate-500">
                     </div>
                 </div>
