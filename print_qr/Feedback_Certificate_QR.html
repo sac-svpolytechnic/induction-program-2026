@@ -54,18 +54,20 @@
             <i class="fa-solid fa-certificate text-amber-300"></i> SCAN FOR E-CERTIFICATE
         </div>
 
-        <!-- High-Resolution QR Code Container -->
+        <!-- High-Resolution Clickable QR Code Container -->
         <div class="bg-slate-50 p-6 rounded-3xl border-2 border-slate-200 inline-block mb-6 shadow-inner">
-            <!-- QR Code pointing to Custom Web Feedback & Certificate Page -->
-            <img id="qrImg" src="https://api.qrserver.com/v1/create-qr-code/?size=350x350&data=https%3A%2F%2Finduction-program-2026.vercel.app%2Ffeedback.html" 
-                 alt="Feedback & E-Certificate QR Code" 
-                 class="w-64 h-64 sm:w-72 sm:h-72 mx-auto rounded-xl shadow-md border-2 border-white">
+            <!-- Clickable QR Code Link (preserves hyperlink in exported PDF) -->
+            <a id="qrLink" href="https://induction-program-2026.vercel.app/feedback.html" target="_blank" rel="noopener noreferrer" title="Click to open Feedback & E-Certificate Page" class="block group">
+                <img id="qrImg" src="https://api.qrserver.com/v1/create-qr-code/?size=350x350&data=https%3A%2F%2Finduction-program-2026.vercel.app%2Ffeedback.html" 
+                     alt="Feedback & E-Certificate QR Code" 
+                     class="w-64 h-64 sm:w-72 sm:h-72 mx-auto rounded-xl shadow-md border-2 border-white group-hover:scale-105 transition-transform cursor-pointer">
+            </a>
         </div>
 
         <!-- Instructions -->
         <div class="space-y-3 bg-emerald-50 border-2 border-emerald-300 rounded-2xl p-4 text-slate-800 text-xs sm:text-sm">
             <div class="font-bold text-emerald-950 flex items-center justify-center gap-2 text-sm">
-                <i class="fa-solid fa-camera text-base text-emerald-600"></i> Scan with Phone Camera or WhatsApp
+                <i class="fa-solid fa-camera text-base text-emerald-600"></i> Scan with Phone Camera or Click QR Code directly in PDF
             </div>
             <p class="leading-relaxed text-slate-700">
                 1. Fill in your details and feedback for <strong>Day 1, Day 2 & Day 3</strong>.<br>
@@ -89,6 +91,7 @@
             }
             const fullUrl = domain.replace(/\/$/, '') + '/feedback.html';
             document.getElementById('qrImg').src = 'https://api.qrserver.com/v1/create-qr-code/?size=350x350&data=' + encodeURIComponent(fullUrl);
+            document.getElementById('qrLink').href = fullUrl;
         }
     </script>
 
