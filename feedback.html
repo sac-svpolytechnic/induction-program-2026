@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback & E-Certificate - SVPC Induction Program '26</title>
+    <meta name="description" content="Submit your Day 1, Day 2 & Day 3 feedback for SVPC Induction Program '26 and instantly download your Official E-Certificate of Participation.">
+    
+    <!-- Google Fonts: Plus Jakarta Sans, Outfit, Cinzel & Playfair Display -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700;800;900&family=Outfit:wght@500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,600&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Plus Jakarta Sans', 'sans-serif'],
+                        heading: ['Outfit', 'sans-serif'],
+                        serif: ['Cinzel', 'Playfair Display', 'serif'],
+                    },
+                    colors: {
+                        brand: {
+                            50: '#f0f3ff',
+                            100: '#e0e7ff',
+                            300: '#a5b4fc',
+                            400: '#818cf8',
+                            500: '#6366f1',
+                            600: '#4f46e5',
+                            700: '#4338ca',
+                            800: '#3730a3',
+                            900: '#312e81',
+                            accent: '#06b6d4',
+                            purple: '#a855f7',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <style>
+        .glass-card {
+            background: rgba(30, 41, 59, 0.8);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+        }
+        .glass-input {
+            background: rgba(15, 23, 42, 0.85);
+            border: 1px solid rgba(51, 65, 85, 0.8);
+            color: #ffffff;
+            transition: all 0.2s ease-in-out;
+        }
+        .glass-input:focus {
+            outline: none;
+            border-color: #818cf8;
+            box-shadow: 0 0 16px rgba(129, 140, 248, 0.35);
+        }
+        .star-rating label {
+            cursor: pointer;
+            transition: color 0.15s ease;
+        }
+        .star-rating input:checked ~ label,
+        .star-rating label:hover,
+        .star-rating label:hover ~ label {
+            color: #f59e0b;
+        }
+        @media print {
+            .no-print { display: none !important; }
+            body { background: white !important; color: black !important; }
+            #certContainer { display: block !important; padding: 0 !important; }
+        }
+    </style>
+</head>
+<body class="bg-slate-950 text-slate-100 min-h-screen flex flex-col justify-between selection:bg-brand-500 selection:text-white relative overflow-x-hidden">
+
+    <!-- Ambient Glowing Backdrops -->
+    <div class="fixed top-0 left-1/4 w-96 h-96 bg-brand-600/20 rounded-full blur-3xl pointer-events-none -z-10"></div>
+    <div class="fixed bottom-0 right-1/4 w-96 h-96 bg-cyan-600/20 rounded-full blur-3xl pointer-events-none -z-10"></div>
+    <div class="fixed top-1/2 right-10 w-80 h-80 bg-purple-600/15 rounded-full blur-3xl pointer-events-none -z-10"></div>
+
+    <!-- Header Navigation -->
+    <header class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 flex items-center justify-between no-print">
+        <a href="index.html" class="flex items-center gap-3 group">
+            <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-brand-600 to-cyan-400 flex items-center justify-center text-white shadow-lg group-hover:scale-105 transition-transform">
+                <i class="fa-solid fa-graduation-cap text-lg"></i>
+            </div>
+            <div>
+                <span class="font-heading font-extrabold text-lg tracking-tight text-white block leading-none">SVPC</span>
+                <span class="text-[10px] uppercase font-bold text-cyan-400 tracking-wider">Induction '26</span>
+            </div>
+        </a>
+        <div class="flex items-center gap-3">
+            <a href="attendance.html" class="text-xs font-semibold text-slate-300 hover:text-white bg-slate-800/80 px-3.5 py-2 rounded-xl border border-slate-700/80 flex items-center gap-1.5 transition-colors">
+                <i class="fa-solid fa-qrcode text-brand-400"></i> Attendance
+            </a>
+            <a href="index.html" class="text-xs font-semibold text-slate-300 hover:text-white bg-slate-800/80 px-3.5 py-2 rounded-xl border border-slate-700/80 flex items-center gap-1.5 transition-colors">
+                <i class="fa-solid fa-house text-cyan-400"></i> Home
+            </a>
+        </div>
+    </header>
+
+    <!-- Main Content Container -->
+    <main class="w-full max-w-3xl mx-auto px-4 py-6">
+        
+        <!-- Feedback Form Card -->
+        <div id="feedbackFormCard" class="glass-card rounded-3xl p-6 sm:p-10 border border-slate-700/80 shadow-2xl relative overflow-hidden transition-all duration-500">
+            
+            <!-- Header Badge & Title -->
+            <div class="text-center mb-8">
+                <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-brand-500/20 border border-brand-400/40 text-brand-200 text-xs font-bold uppercase tracking-wider mb-3">
+                    <i class="fa-solid fa-award"></i> Induction Program '26 Feedback & E-Certificate
+                </div>
+                <h1 class="font-heading text-2xl sm:text-4xl font-extrabold text-white tracking-tight">
+                    Share Your Feedback & Get Certificate
+                </h1>
+                <p class="text-slate-300 text-xs sm:text-sm mt-2 max-w-lg mx-auto leading-relaxed">
+                    Please provide your details and experience ratings for Day 1, Day 2, and Day 3. Your <strong>Official E-Certificate of Participation</strong> will be generated instantly upon submission!
+                </p>
+            </div>
+
+            <!-- Feedback Form -->
+            <form id="feedbackForm" class="space-y-6">
+
+                <!-- SECTION 1: PARTICIPANT PERSONAL DETAILS -->
+                <div class="bg-slate-900/60 p-5 rounded-2xl border border-slate-800/80 space-y-4">
+                    <h3 class="font-heading text-sm font-bold uppercase tracking-wider text-cyan-400 flex items-center gap-2 border-b border-slate-800 pb-2">
+                        <i class="fa-solid fa-user-gear"></i> Participant Information
+                    </h3>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <!-- Full Name -->
+                        <div class="sm:col-span-2">
+                            <label for="fbName" class="block text-xs font-bold uppercase tracking-wider text-slate-200 mb-2">
+                                Full Name (Printed on Certificate) <span class="text-rose-400 text-xs font-normal lowercase ml-1">(Required)</span>
+                            </label>
+                            <div class="relative">
+                                <div class="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-slate-400">
+                                    <i class="fa-regular fa-user text-sm"></i>
+                                </div>
+                                <input type="text" id="fbName" name="entry.1443275563" required placeholder="e.g. Rahul Sharma"
+                                    class="glass-input w-full pl-10 pr-4 py-3.5 rounded-xl text-sm placeholder:text-slate-500 font-medium">
+                            </div>
+                        </div>
+
+                        <!-- Email Address -->
+                        <div>
+                            <label for="fbEmail" class="block text-xs font-bold uppercase tracking-wider text-slate-200 mb-2">
+                                Email Address <span class="text-rose-400 text-xs font-normal lowercase ml-1">(Required)</span>
+                            </label>
+                            <div class="relative">
+                                <div class="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-slate-400">
+                                    <i class="fa-regular fa-envelope text-sm"></i>
+                                </div>
+                                <input type="email" id="fbEmail" name="entry.2095453778" required placeholder="rahul@gmail.com"
+                                    class="glass-input w-full pl-10 pr-4 py-3.5 rounded-xl text-sm placeholder:text-slate-500">
+                            </div>
+                        </div>
+
+                        <!-- Mobile Number / Enrollment ID -->
+                        <div>
+                            <label for="fbMobile" class="block text-xs font-bold uppercase tracking-wider text-slate-200 mb-2">
+                                Mobile No. / Enrollment ID <span class="text-rose-400 text-xs font-normal lowercase ml-1">(Required)</span>
+                            </label>
+                            <div class="relative">
+                                <div class="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-slate-400">
+                                    <i class="fa-solid fa-phone text-sm"></i>
+                                </div>
+                                <input type="tel" id="fbMobile" name="entry.41517796" required placeholder="+91 9876543210"
+                                    class="glass-input w-full pl-10 pr-4 py-3.5 rounded-xl text-sm placeholder:text-slate-500">
+                            </div>
+                        </div>
+
+                        <!-- Diploma Branch -->
+                        <div class="sm:col-span-2">
+                            <label for="fbBranch" class="block text-xs font-bold uppercase tracking-wider text-slate-200 mb-2">
+                                Diploma Branch <span class="text-rose-400 text-xs font-normal lowercase ml-1">(Required)</span>
+                            </label>
+                            <div class="relative">
+                                <div class="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-slate-400">
+                                    <i class="fa-solid fa-graduation-cap text-sm"></i>
+                                </div>
+                                <select id="fbBranch" name="entry.436059077" required
+                                    class="glass-input w-full pl-10 pr-8 py-3.5 rounded-xl text-sm appearance-none cursor-pointer">
+                                    <option value="" disabled selected class="bg-slate-900 text-slate-400">Select Your Diploma Branch</option>
+                                    <option value="Information Technology (IT)" class="bg-slate-900 text-white">Information Technology (IT)</option>
+                                    <option value="Computer Science (CS)" class="bg-slate-900 text-white">Computer Science (CS)</option>
+                                    <option value="Civil Engineering" class="bg-slate-900 text-white">Civil Engineering</option>
+                                    <option value="Mechanical Engineering" class="bg-slate-900 text-white">Mechanical Engineering</option>
+                                    <option value="Electrical Engineering" class="bg-slate-900 text-white">Electrical Engineering</option>
+                                    <option value="Electronics Engineering" class="bg-slate-900 text-white">Electronics Engineering</option>
+                                    <option value="Production Engineering" class="bg-slate-900 text-white">Production Engineering</option>
+                                    <option value="FTTP" class="bg-slate-900 text-white">FTTP</option>
+                                    <option value="Pharmacy" class="bg-slate-900 text-white">Pharmacy</option>
+                                    <option value="MOM" class="bg-slate-900 text-white">MOM</option>
+                                    <option value="Architecture" class="bg-slate-900 text-white">Architecture</option>
+                                    <option value="Other Diploma Branch" class="bg-slate-900 text-white">Other Diploma Branch</option>
+                                </select>
+                                <div class="absolute inset-y-0 right-0 pr-3.5 flex items-center pointer-events-none text-slate-400">
+                                    <i class="fa-solid fa-chevron-down text-xs"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- SECTION 2: DAY 1 FEEDBACK -->
+                <div class="bg-slate-900/60 p-5 rounded-2xl border border-slate-800/80 space-y-3">
+                    <div class="flex items-center justify-between border-b border-slate-800 pb-2">
+                        <h3 class="font-heading text-sm font-bold uppercase tracking-wider text-brand-300 flex items-center gap-2">
+                            <i class="fa-solid fa-calendar-day text-brand-400"></i> Day 1 Feedback (Aug 5)
+                            <span class="text-rose-400 text-xs font-normal lowercase ml-1">(Required)</span>
+                        </h3>
+                        <span class="text-xs bg-brand-500/20 text-brand-300 border border-brand-500/30 px-2.5 py-0.5 rounded-full font-semibold">Orientation</span>
+                    </div>
+                    <div>
+                        <label for="fbDay1" class="block text-xs font-semibold text-slate-300 mb-1.5">How was your Day 1 experience & key takeaways?</label>
+                        <textarea id="fbDay1" name="entry.1677766204" rows="3" required placeholder="Share your feedback, rating, or experience for Day 1 orientation sessions..."
+                            class="glass-input w-full p-3.5 rounded-xl text-xs sm:text-sm placeholder:text-slate-500"></textarea>
+                    </div>
+                </div>
+
+                <!-- SECTION 3: DAY 2 FEEDBACK -->
+                <div class="bg-slate-900/60 p-5 rounded-2xl border border-slate-800/80 space-y-3">
+                    <div class="flex items-center justify-between border-b border-slate-800 pb-2">
+                        <h3 class="font-heading text-sm font-bold uppercase tracking-wider text-cyan-300 flex items-center gap-2">
+                            <i class="fa-solid fa-calendar-day text-cyan-400"></i> Day 2 Feedback (Aug 6)
+                            <span class="text-rose-400 text-xs font-normal lowercase ml-1">(Required)</span>
+                        </h3>
+                        <span class="text-xs bg-cyan-500/20 text-cyan-300 border border-cyan-500/30 px-2.5 py-0.5 rounded-full font-semibold">Workshops</span>
+                    </div>
+                    <div>
+                        <label for="fbDay2" class="block text-xs font-semibold text-slate-300 mb-1.5">How was your Day 2 experience & key takeaways?</label>
+                        <textarea id="fbDay2" name="entry.1182785486" rows="3" required placeholder="Share your feedback, rating, or experience for Day 2 workshops & activities..."
+                            class="glass-input w-full p-3.5 rounded-xl text-xs sm:text-sm placeholder:text-slate-500"></textarea>
+                    </div>
+                </div>
+
+                <!-- SECTION 4: DAY 3 FEEDBACK -->
+                <div class="bg-slate-900/60 p-5 rounded-2xl border border-slate-800/80 space-y-3">
+                    <div class="flex items-center justify-between border-b border-slate-800 pb-2">
+                        <h3 class="font-heading text-sm font-bold uppercase tracking-wider text-pink-300 flex items-center gap-2">
+                            <i class="fa-solid fa-calendar-day text-pink-400"></i> Day 3 Feedback (Aug 7)
+                            <span class="text-rose-400 text-xs font-normal lowercase ml-1">(Required)</span>
+                        </h3>
+                        <span class="text-xs bg-pink-500/20 text-pink-300 border border-pink-500/30 px-2.5 py-0.5 rounded-full font-semibold">Valedictory</span>
+                    </div>
+                    <div>
+                        <label for="fbDay3" class="block text-xs font-semibold text-slate-300 mb-1.5">How was your Day 3 experience & overall program?</label>
+                        <textarea id="fbDay3" name="entry.2147007264" rows="3" required placeholder="Share your feedback, rating, or experience for Day 3 valedictory & cultural events..."
+                            class="glass-input w-full p-3.5 rounded-xl text-xs sm:text-sm placeholder:text-slate-500"></textarea>
+                    </div>
+                </div>
+
+                <!-- Submit Button -->
+                <button type="submit" id="submitBtn"
+                    class="w-full py-4 bg-gradient-to-r from-brand-600 via-purple-600 to-cyan-500 hover:from-brand-500 hover:to-cyan-400 text-white font-bold rounded-xl shadow-xl shadow-brand-500/30 hover:scale-[1.01] active:scale-[0.99] transition-all flex items-center justify-center gap-2 mt-6 text-sm sm:text-base">
+                    <i class="fa-solid fa-certificate text-lg text-amber-300 animate-pulse"></i>
+                    <span id="btnText">Submit Feedback & Generate E-Certificate</span>
+                </button>
+
+            </form>
+
+        </div>
+
+        <!-- Certificate Display Card (Initially Hidden) -->
+        <div id="certContainer" class="hidden glass-card rounded-3xl p-6 sm:p-10 border border-emerald-500/40 shadow-2xl text-center space-y-6 mt-6">
+            
+            <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-emerald-500/20 border border-emerald-400/40 text-emerald-300 text-xs font-bold uppercase tracking-wider">
+                <i class="fa-solid fa-circle-check"></i> E-Certificate Ready for Download!
+            </div>
+            
+            <div>
+                <h2 class="font-heading text-2xl sm:text-3xl font-extrabold text-white">
+                    Congratulations, <span id="studentNameDisplay" class="text-cyan-400">Participant</span>!
+                </h2>
+                <p class="text-slate-300 text-xs sm:text-sm mt-1">
+                    Your feedback has been recorded. Here is your official <strong>Induction Program 2026 Certificate of Participation</strong>!
+                </p>
+            </div>
+
+            <!-- Canvas Container -->
+            <div class="relative w-full max-w-2xl mx-auto rounded-2xl overflow-hidden border-2 border-amber-400/40 shadow-2xl bg-white p-1">
+                <canvas id="certCanvas" class="w-full h-auto rounded-xl block mx-auto"></canvas>
+            </div>
+
+            <!-- Download & Action Buttons -->
+            <div class="flex flex-wrap items-center justify-center gap-4 pt-2 no-print">
+                <button onclick="downloadCertificate()" class="px-6 py-3.5 bg-gradient-to-r from-emerald-500 to-teal-600 hover:from-emerald-400 hover:to-teal-500 text-slate-950 font-extrabold rounded-xl shadow-lg shadow-emerald-500/20 flex items-center gap-2 text-sm transition-all hover:scale-105">
+                    <i class="fa-solid fa-download text-base"></i> Download Certificate (PNG)
+                </button>
+                <button onclick="window.print()" class="px-5 py-3.5 bg-slate-800 hover:bg-slate-700 text-white font-bold rounded-xl border border-slate-700 flex items-center gap-2 text-sm transition-all">
+                    <i class="fa-solid fa-print text-base"></i> Print / Save as PDF
+                </button>
+                <button onclick="shareWhatsApp()" class="px-5 py-3.5 bg-emerald-600 hover:bg-emerald-700 text-white font-bold rounded-xl flex items-center gap-2 text-sm transition-all">
+                    <i class="fa-brands fa-whatsapp text-lg"></i> Share Status
+                </button>
+                <button onclick="showFormAgain()" class="px-4 py-3.5 bg-slate-900/80 hover:bg-slate-900 text-slate-400 hover:text-white font-semibold rounded-xl text-xs">
+                    <i class="fa-solid fa-pen"></i> Edit Information
+                </button>
+            </div>
+
+        </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="w-full text-center py-6 text-slate-500 text-xs border-t border-slate-800/80 no-print">
+        SVPC Induction Program '26 • Organised by Innovation Club
+    </footer>
+
+    <!-- JavaScript Logic -->
+    <script>
+        // -----------------------------------------------------------------------------
+        // CONFIGURATION FOR DEVELOPER:
+        // When you create your Google Form, paste your form's formResponse URL here:
+        // e.g. const GOOGLE_FORM_ACTION = 'https://docs.google.com/forms/d/e/1FAIpQLS.../formResponse';
+        // -----------------------------------------------------------------------------
+        const GOOGLE_FORM_ACTION = 'https://docs.google.com/forms/d/e/1FAIpQLScGtv-OHwtO6U2itZLrmGGRchm8eEBaW9s2-gQxJ30Ir59qvQ/formResponse';
+
+        let certImageLoaded = false;
+        const certImage = new Image();
+        certImage.crossOrigin = "anonymous";
+        certImage.src = 'images/certificate_template.jpg';
+
+        certImage.onload = () => {
+            certImageLoaded = true;
+            // Pre-draw blank template if needed
+            drawCertificate("Participant Name");
+        };
+
+        // Form Submit Handler
+        document.getElementById('feedbackForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const btn = document.getElementById('submitBtn');
+            btn.disabled = true;
+            btn.innerHTML = `<i class="fa-solid fa-spinner fa-spin text-lg"></i> Submitting & Generating...`;
+
+            const name = document.getElementById('fbName').value.trim();
+            const branch = document.getElementById('fbBranch').value;
+
+            // Submit Asynchronously to Google Forms
+            const formData = new FormData(this);
+
+            fetch(GOOGLE_FORM_ACTION, {
+                method: 'POST',
+                mode: 'no-cors',
+                body: formData
+            }).then(() => {
+                onSubmissionSuccess(name);
+            }).catch(() => {
+                onSubmissionSuccess(name);
+            });
+        });
+
+        function onSubmissionSuccess(name) {
+            document.getElementById('studentNameDisplay').innerText = name;
+            
+            // Render Certificate
+            drawCertificate(name);
+
+            // Toggle visibility
+            document.getElementById('feedbackFormCard').classList.add('hidden');
+            const certCard = document.getElementById('certContainer');
+            certCard.classList.remove('hidden');
+            window.scrollTo({ top: certCard.offsetTop - 30, behavior: 'smooth' });
+        }
+
+        // Draw Certificate onto HTML5 Canvas
+        function drawCertificate(studentName) {
+            const canvas = document.getElementById('certCanvas');
+            const ctx = canvas.getContext('2d');
+
+            // Set native high resolution dimensions matching template image (1024 x 682)
+            canvas.width = 1024;
+            canvas.height = 682;
+
+            if (certImageLoaded) {
+                ctx.drawImage(certImage, 0, 0, canvas.width, canvas.height);
+            } else {
+                // Fallback background if image fails to load
+                ctx.fillStyle = '#ffffff';
+                ctx.fillRect(0, 0, canvas.width, canvas.height);
+            }
+
+            // Draw Student's Full Name over the baseline
+            // Coordinates tuned for SVPC Induction Program '26 certificate template:
+            // Center of blank line: X = 595, Y = 350
+            const fontSize = studentName.length > 25 ? 20 : (studentName.length > 18 ? 24 : 28);
+            
+            ctx.textAlign = 'center';
+            ctx.textBaseline = 'alphabetic';
+            ctx.font = `bold ${fontSize}px 'Cinzel', 'Playfair Display', Georgia, serif`;
+            ctx.fillStyle = '#0f172a'; // Deep Slate Navy Blue
+
+            // Draw text
+            ctx.fillText(studentName, 595, 348);
+        }
+
+        // Download PNG Function
+        function downloadCertificate() {
+            const canvas = document.getElementById('certCanvas');
+            const studentName = document.getElementById('fbName').value.trim() || 'Participant';
+            const filename = `SVPC_Induction_2026_Certificate_${studentName.replace(/\s+/g, '_')}.png`;
+
+            const link = document.createElement('a');
+            link.download = filename;
+            link.href = canvas.toDataURL('image/png', 1.0);
+            link.click();
+        }
+
+        // Share on WhatsApp
+        function shareWhatsApp() {
+            const name = document.getElementById('fbName').value.trim() || 'Participant';
+            const text = encodeURIComponent(`🎉 I have successfully attended the SVPC Induction Program '26 and received my Official E-Certificate of Participation! 📜🎓\n\nSubmit your feedback & get yours: ${window.location.href}`);
+            window.open(`https://api.whatsapp.com/send?text=${text}`, '_blank');
+        }
+
+        // Edit Information / Re-show Form
+        function showFormAgain() {
+            document.getElementById('certContainer').classList.add('hidden');
+            document.getElementById('feedbackFormCard').classList.remove('hidden');
+            const btn = document.getElementById('submitBtn');
+            btn.disabled = false;
+            btn.innerHTML = `<i class="fa-solid fa-certificate text-lg text-amber-300"></i> <span>Submit Feedback & Generate E-Certificate</span>`;
+            window.scrollTo({ top: document.getElementById('feedbackFormCard').offsetTop - 30, behavior: 'smooth' });
+        }
+    </script>
+</body>
+</html>

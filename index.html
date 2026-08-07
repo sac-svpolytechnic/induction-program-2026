@@ -136,7 +136,7 @@
                 </div>
             </a>
 
-            <!-- Page Navigation Tabs (2 Tabs: Home & Clubs/Suggestions) -->
+            <!-- Page Navigation Tabs (Home, Clubs & Feedback) -->
             <nav class="hidden md:flex items-center gap-2 bg-slate-800/90 p-1.5 rounded-xl border border-slate-700 text-sm font-medium">
                 <button onclick="switchPage('home')" id="navTabHome" class="nav-tab-btn px-4 py-2 rounded-lg transition-all flex items-center gap-2 bg-gradient-to-r from-brand-600 to-brand-500 text-white shadow-md">
                     <i class="fa-solid fa-house text-xs"></i> Home & Registration
@@ -144,10 +144,16 @@
                 <button onclick="switchPage('clubs')" id="navTabClubs" class="nav-tab-btn px-4 py-2 rounded-lg text-slate-300 hover:text-white transition-all flex items-center gap-2">
                     <i class="fa-solid fa-users text-xs"></i> Clubs & Suggestions
                 </button>
+                <a href="feedback.html" class="px-4 py-2 rounded-lg text-amber-300 hover:text-white transition-all flex items-center gap-2 hover:bg-slate-700/60">
+                    <i class="fa-solid fa-award text-xs text-amber-400"></i> Feedback & E-Cert
+                </a>
             </nav>
 
             <!-- CTA Header Button & Status -->
             <div class="flex items-center gap-4">
+                <a href="feedback.html" class="hidden sm:inline-flex items-center justify-center px-4 py-2 text-xs font-bold text-amber-300 bg-amber-500/10 border border-amber-400/30 rounded-xl hover:bg-amber-500/20 transition-all gap-1.5">
+                    <i class="fa-solid fa-award"></i> E-Certificate
+                </a>
                 <button onclick="switchPage('home'); scrollToRegistration();" class="relative inline-flex items-center justify-center px-5 py-2.5 text-sm font-semibold text-white transition-all duration-200 bg-gradient-to-r from-brand-600 via-brand-500 to-cyan-500 rounded-xl shadow-lg shadow-brand-500/30 hover:shadow-brand-500/50 hover:scale-105 active:scale-95">
                     Register Now
                 </button>
@@ -162,6 +168,9 @@
             <button onclick="switchPage('clubs')" id="mobileNavClubs" class="mobile-nav-btn text-slate-300 flex items-center gap-1.5">
                 <i class="fa-solid fa-users"></i> Clubs & Ideas
             </button>
+            <a href="feedback.html" class="text-amber-300 font-bold flex items-center gap-1.5">
+                <i class="fa-solid fa-award"></i> E-Cert
+            </a>
         </div>
     </header>
 
